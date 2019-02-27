@@ -1,0 +1,16 @@
+$primario:#004967;
+$secundario:#343A40;
+$texto:#F8F9FA;
+$tres:#0275D8;
+$cuatro:#564243;
+// Cabeza de inicio;
+
+.cabeza{
+    background: $secundario;
+    color:$texto;
+    padding: 1rem 0;
+}
+.cabeza i{
+    margin: 0 1rem;
+}
+
