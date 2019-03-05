@@ -6,7 +6,7 @@ $cuatro:#564243;
 
 
 html{
-    font-size: 15px;
+    font-size: 13px;
 }
 body{
     font-family: 'arial';
@@ -20,7 +20,8 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 3rem;
-    padding: .3rem 2rem;
+    padding: .7rem 2.5rem;
+    font-size: 1.4rem;
 }
 
 .btn:hover{
@@ -33,19 +34,44 @@ body{
     left: .4rem;
     transition: all .4s ease;
 }
+
+#pymes{
+    margin-left: 5rem;
+}
+#pymes:after{
+        content: '\f0b1';
+    font-family: 'FontAwesome';
+}
 .btn:hover:after{
     left: .8rem;
     transform: rotateZ(-373deg)
 }
 
+/*BOton Primario */
+
+.btn-primary{
+    background-color: $primario !important; // important dice  que prevalezca ante los demás elementos
+    border-color: transparent !important; // que color quieres y cuanto porciento
+}
+
+.btn-primary:hover,.btn-primary:focus{
+    background-color: darken($primario,10%) !important;
+}
+.btn-primary:active{
+    background-color: darken($primario,20%) !important;
+    border-color: darken($primario,30%) !important;
+}
+
+.btn-primary:focus{
+box-shadow: 0 0 0 .2rem rgba($primario, .5)!important; // arriba, laterales difumindao light, difuminado fuerte, color de sombra 
+}
+
 // Cabeza de inicio;
 
 .cabeza{
-background: $secundario !important;
+    background: $secundario !important;
     color:$texto;
     padding: .5rem 0;
-    z-index: 11;
-    
     
 }
 .cabeza i{
@@ -55,12 +81,18 @@ background: $secundario !important;
 /*--------------------------------------
  ENCABEZADO
 -----------------------------------------*/
+
+
 .encabezado{
-    z-index: 10;
-    padding-top: 0;
-    padding-bottom: 0;
-    
+    margin-rigth: 0;
 }
+
+.sticky{
+position: fixed;
+top: 0;
+width: 100%;
+}
+
 .encabezado .logo img{
     width: 230px;
     padding-right: .5rem;
@@ -76,45 +108,100 @@ background: $secundario !important;
     cursor: pointer;
     margin-left: auto;
 }
+/* ESTILOS MENUS */
+.dropdown-menu{
+    border: 1px solid $primario;
+    border-top-width: 5px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+.dropdown-menu a i{
+    font-size: .85rem;
+    margin-right: 0.5rem;
+}
 .encabezado #empresarial{
+    font-size: 1rem;
     padding-left: auto;
     color: rgba(0, 0, 0, 0.5);
 }
+
 
 /*--------------------------------------
     SECCION BIENVENIDOS
 -----------------------------------------*/
 .bienvenidos{
-    display: flex;
     background: url('../img/1x/inicio-fondo-100.jpg') no-repeat center top;
     color: white;
     background-attachment: fixed !important;
     background-size: cover;
     height: 100vh;
     flex-direction: column;
-    align-items: center;
+    display: flex;
 
 }
 
+.bienvenidos .texto{
+ margin: auto 0
+    
+}
 
-
+.bienvenidos .texto .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100%
+}
 
 /*   TEXTO CENTRAL */
-.bienvenidos h1{
-    margin: auto;
+.bienvenidos .texto h1{
+    display:inline-block;
+    font-size: 2.2rem;
+}
+
+.bienvenidos .texto p{
+    font-size: 1.8rem;
     display: inline-block;
-    font-size: 2.5rem;
-    text-align: center;
-    
+    height: 120px;
 }
 
-.bienvenidos p{
+/*--------------------------------
+++++MEDIA´S QUERY++++
+------------------------------------*/
 
-    font-size: 2rem;
-    text-align: center;
+@media (min-width:768px){
+    .navbar .container{
+        position: relative;
+    }
     
-}
+    .mega-menu{
+        position: static;
+    }
+    
+    .mega-menu .dropdown-menu{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .bienvenidos .texto h1,{
+       font-size: 3rem;
+        margin-bottom: 0;
+    }
+    .bienvenidos .texto h1,
+    .bienvenidos .texto p{
+        text-align: left;
+    }
+    .bienvenidos .texto p{
 
+    height: 50px;
+    }
+    .bienvenidos .texto .container{
+        align-items: stretch;
+    }
+    
+    
+        
+    }
 
 
 

@@ -19,15 +19,16 @@
 <body>
    
     <section class="bienvenidos">
-       
-        <div class="cabeza">               
+           <div class="cabeza">               
+           <div class="container">
             <div class="row justify-content-between justify-content-md-end">
-            <div class="col-auto"><i class="fa fa-phone fa-flip-horizontal mr-2"></i>+52 (55) 3716 1945</div>
+            <div class="col-auto"><i class="fa fa-phone mr-2"></i>+52 (55) 3716 1945</div>
             <div class="col-auto"><i class="fa fa-envelope fa-flip-horizontal mr-2"></i>cp.alejandro@cangri.net</div>
            </div>
-        </div>
-        
-        <header class="encabezado navbar navbar-light bg-light navbar-expand-md" id="encabezado-inicio">
+            </div>
+           </div>
+                   
+        <header class="encabezado navbar navbar-light bg-light navbar-expand-md" id="encabezado">
                            
                    <div class="container">
                     
@@ -46,22 +47,34 @@
                     <ul class="navbar-nav">   
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="fa fa-home mr-1 fa-lg"></i>Inicio</a>
+                        <a href="#" class="nav-link active"><i class="fa fa-home mr-1 fa-lg"></i>Inicio</a>
                     </li>
                     
                     <!--Lista de Servicios -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown mega-menu">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" 
                         role="button" aria-expanded="false" aria-haspopup="true" id="item-menu-servicios"><i class="fa fa-area-chart mr-1"></i>Servicios</a>
-                        <div class="dropdown-menu" aria-labelledby="item-menu-servicios">
-                            
+                        
+                         <div class="dropdown-menu" aria-labelledby="item-menu-servicios">
+                         
+                          <section class="row px-2">
+                            <div class="col-12 col-md-6">
+                                
                             <a href="#" class="dropdown-item">Contabilidad</a>
                             <a href="#" class="dropdown-item">Declaraciones</a>
                             <a href="#" class="dropdown-item">Impuestos</a>
                             <a href="#" class="dropdown-item">Declaraciones</a>
+                            
+                            </div>
+                            
+                            <div class="col-12 col-md-6">
+                            
                             <a href="#" class="dropdown-item">patentes</a>
                             <a href="#" class="dropdown-item">Trámites gubernamentales</a>
                             <a href="#" class="dropdown-item">Outsourcing</a>
+                            
+                            </div>
+                          </section>
                         </div>
                     </li>
                     <!--LISTA DE NOSOTROS-->
@@ -85,7 +98,7 @@
         </header>
     
        <!--   ENCABEZADO -->        
-            <div class"texto">
+        <div class="texto">
         
                <div class="container">
                 <h1 class="font-weight-bold">
@@ -93,12 +106,13 @@
                 </h1>
                 
                 <p>
-                    Te ayudamos con la contabilidad de: <br class="d-md-none"><u><b><span class="typed"></span></b></u>
+                    Te ayudamos con <br class="d-md-none"><u><span class="typed"> </span></u>
                 <p>
                 <button class="btn btn-primary">CONTÁCTANOS</button>
+                <button class="btn btn-primary d-none d-md-inline-block" id="pymes">PYMES</button>
                 
             </div>
-            </div>
+        </div>
             
     </section>
 <!--FIN de la página de inicio / INICIO página de servicios-->       
@@ -342,28 +356,65 @@
             // Can also be included with a regular script tag
             
             var options = {
-            strings: ["<b><u>Personas físicas. ^450</u></b>", "<b><u>Personas morales.</u></b>","<b><u>Empresas.</u></b>" ],
+            strings: (function (){
+            
+            if (screen.width < 768)
+                return [, "Contabilidad para<br> Personas Morales^450","Contabilidad para <br>Personas Físicas^450","Contabilidad para<br> Empresas^450"];
+            else
+                return [, "Contabilidad para Personas Morales^450","Contabilidad para Personas Físicas^450","Contabilidad para Empresas^450"]
+        }()),
+                
             typeSpeed: 48,
             smartBackspace:false,
             loop:true,
             backSpeed: 25,
-            startDelay:500
+            startDelay:700
             }
             
             var typed = new Typed(".typed", options);
             
-                          });
+            });
+    </script>
+    <script>
+            //Funciones JQuery
+        
+            $(document).ready(function(){
             
-            $(window).scroll(function(){
-            var ayuwoki = $('#encabezado-inicio');
-            var scroll = $(window).scrollTop();
-             if( scroll >= 80 ){
-                ayuwoki.addClass('fixed-top')
-                }
-            else{
-                ayuwoki.removeClass('fixed-top')
+            $('.mega-menu .dropdown-menu').click(function(n){
+                n.stopPropagation();
+            })
+            
+                          });
+        
+        
+            //Funciones JS//
+            
+            //sticky function;
+            window.onscroll = function(){
+                myFunction();
             }
-        })
-
+            
+            function myFunction(){
+            var ayuwoki = document.getElementById('encabezado');
+            var sticky = ayuwoki.offsetTop;
+        
+             if( window.pageYOffset > sticky ){
+                ayuwoki.classList.add("sticky");
+                }else{
+                    
+                ayuwoki.classList.remove("sticky");
+                }
+            }
+        var cadenas = (function (){
+            
+            if (screen.width >= 768)
+                return [, "Contabilidad para<br> Personas Morales^450","Contabilidad para <br>Personas Físicas^450","Contabilidad para<br> Empresas^450"];
+            else
+                return [, "Contabilidad para Personas Morales^450","Contabilidad para Personas Físicas^450","Contabilidad para Empresas^450"]
+        }());
+            
+        console.log(cadenas)
+            
+            
     </script>
 </html>

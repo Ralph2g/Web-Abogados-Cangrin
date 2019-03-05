@@ -1,5 +1,6 @@
+@charset "UTF-8";
 html {
-  font-size: 15px; }
+  font-size: 13px; }
 
 body {
   font-family: 'arial';
@@ -13,7 +14,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 3rem;
-  padding: .3rem 2rem; }
+  padding: .7rem 2.5rem;
+  font-size: 1.4rem; }
 
 .btn:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.31); }
@@ -25,15 +27,36 @@ body {
   left: .4rem;
   transition: all .4s ease; }
 
+#pymes {
+  margin-left: 5rem; }
+
+#pymes:after {
+  content: '\f0b1';
+  font-family: 'FontAwesome'; }
+
 .btn:hover:after {
   left: .8rem;
   transform: rotateZ(-373deg); }
 
+/*BOton Primario */
+.btn-primary {
+  background-color: #004967 !important;
+  border-color: transparent !important; }
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #002534 !important; }
+
+.btn-primary:active {
+  background-color: #000101 !important;
+  border-color: black !important; }
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 73, 103, 0.5) !important; }
+
 .cabeza {
   background: #343A40 !important;
   color: #F8F9FA;
-  padding: .5rem 0;
-  z-index: 11; }
+  padding: .5rem 0; }
 
 .cabeza i {
   margin: 0 1rem; }
@@ -42,9 +65,12 @@ body {
  ENCABEZADO
 -----------------------------------------*/
 .encabezado {
-  z-index: 10;
-  padding-top: 0;
-  padding-bottom: 0; }
+  margin-rigth: 0; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
 
 .encabezado .logo img {
   width: 230px;
@@ -61,7 +87,18 @@ body {
   cursor: pointer;
   margin-left: auto; }
 
+/* ESTILOS MENUS */
+.dropdown-menu {
+  border: 1px solid #004967;
+  border-top-width: 5px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25); }
+
+.dropdown-menu a i {
+  font-size: .85rem;
+  margin-right: 0.5rem; }
+
 .encabezado #empresarial {
+  font-size: 1rem;
   padding-left: auto;
   color: rgba(0, 0, 0, 0.5); }
 
@@ -69,24 +106,62 @@ body {
     SECCION BIENVENIDOS
 -----------------------------------------*/
 .bienvenidos {
-  display: flex;
   background: url("../img/1x/inicio-fondo-100.jpg") no-repeat center top;
   color: white;
   background-attachment: fixed !important;
   background-size: cover;
   height: 100vh;
   flex-direction: column;
-  align-items: center; }
+  display: flex; }
+
+.bienvenidos .texto {
+  margin: auto 0; }
+
+.bienvenidos .texto .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 100%; }
 
 /*   TEXTO CENTRAL */
-.bienvenidos h1 {
-  margin: auto;
+.bienvenidos .texto h1 {
   display: inline-block;
-  font-size: 2.5rem;
-  text-align: center; }
+  font-size: 2.2rem; }
 
-.bienvenidos p {
-  font-size: 2rem;
-  text-align: center; }
+.bienvenidos .texto p {
+  font-size: 1.8rem;
+  display: inline-block;
+  height: 120px; }
+
+/*--------------------------------
+++++MEDIA´S QUERY++++
+------------------------------------*/
+@media (min-width: 768px) {
+  .navbar .container {
+    position: relative; }
+
+  .mega-menu {
+    position: static; }
+
+  .mega-menu .dropdown-menu {
+    position: relative;
+    width: 100%;
+    left: 0; }
+
+  .bienvenidos .texto h1 {
+    font-size: 3rem;
+    margin-bottom: 0; }
+
+  .bienvenidos .texto h1,
+  .bienvenidos .texto p {
+    text-align: left; }
+
+  .bienvenidos .texto p {
+    height: 50px; }
+
+  .bienvenidos .texto .container {
+    align-items: stretch; } }
 
 /*# sourceMappingURL=styles.css.map */
