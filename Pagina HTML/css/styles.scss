@@ -3,14 +3,122 @@ $secundario:#343A40;
 $texto:#F8F9FA;
 $tres:#0275D8;
 $cuatro:#564243;
+
+
+html{
+    font-size: 15px;
+}
+body{
+    font-family: 'arial';
+    color: $texto;
+}
+/*--------------------------------------
+ ESTILOS GENERALES DE LOS BOTONES
+-----------------------------------------*/
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    padding: .3rem 2rem;
+}
+
+.btn:hover{
+    box-shadow: 0 6px 15px rgba(0,0,0,0.31);
+}
+.btn:after{
+    content: '\f232';
+    font-family: 'FontAwesome';
+    position: relative; //no afecta la pocision de las demás cosas
+    left: .4rem;
+    transition: all .4s ease;
+}
+.btn:hover:after{
+    left: .8rem;
+    transform: rotateZ(-373deg)
+}
+
 // Cabeza de inicio;
 
 .cabeza{
-    background: $secundario;
+background: $secundario !important;
     color:$texto;
-    padding: 1rem 0;
+    padding: .5rem 0;
+    z-index: 11;
+    
+    
 }
 .cabeza i{
     margin: 0 1rem;
 }
+
+/*--------------------------------------
+ ENCABEZADO
+-----------------------------------------*/
+.encabezado{
+    z-index: 10;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+}
+.encabezado .logo img{
+    width: 230px;
+    padding-right: .5rem;
+}
+.encabezado .btn-nav{
+    padding: .6rem 0 .6rem 0;
+    font-size: 2.5rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: black;
+    cursor: pointer;
+    margin-left: auto;
+}
+.encabezado #empresarial{
+    padding-left: auto;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*--------------------------------------
+    SECCION BIENVENIDOS
+-----------------------------------------*/
+.bienvenidos{
+    display: flex;
+    background: url('../img/1x/inicio-fondo-100.jpg') no-repeat center top;
+    color: white;
+    background-attachment: fixed !important;
+    background-size: cover;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+
+/*   TEXTO CENTRAL */
+.bienvenidos h1{
+    margin: auto;
+    display: inline-block;
+    font-size: 2.5rem;
+    text-align: center;
+    
+}
+
+.bienvenidos p{
+
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
 
