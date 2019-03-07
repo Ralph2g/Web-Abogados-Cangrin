@@ -5,13 +5,22 @@ $tres:#0275D8;
 $cuatro:#564243;
 
 
+/*---------------------------
+    ESTILOS GENERALES
+----------------------------*/
 html{
     font-size: 13px;
 }
 body{
     font-family: 'arial';
-    color: $texto;
+    color: $primario;
 }
+.titulo{
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+
 /*--------------------------------------
  ESTILOS GENERALES DE LOS BOTONES
 -----------------------------------------*/
@@ -66,7 +75,31 @@ body{
 box-shadow: 0 0 0 .2rem rgba($primario, .5)!important; // arriba, laterales difumindao light, difuminado fuerte, color de sombra 
 }
 
-// Cabeza de inicio;
+/*---------------------------
+    ESTILOS CONTENIDO
+----------------------------*/
+
+.cabeza-contenido .separador-titulos{
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    height: 7px;
+    width: 100%;
+    background: $primario
+}
+.cabeza-contenido .titulo{
+    border-left: solid;
+    border-width: 8px;
+    padding-left: 1rem;
+}
+.cabeza-contenido P{
+    font-size: 1.4rem;
+    
+}
+
+/*--------------------------------------
++++++++++CABEZA DE INICIO++++++++++++
+-----------------------------------------*/
 
 .cabeza{
     background: $secundario !important;
@@ -79,12 +112,12 @@ box-shadow: 0 0 0 .2rem rgba($primario, .5)!important; // arriba, laterales difu
 }
 
 /*--------------------------------------
- ENCABEZADO
+ ++++++++++++++ENCABEZADO+++++++++++++++
 -----------------------------------------*/
 
 
 .encabezado{
-    margin-rigth: 0;
+    z-index: 100;
 }
 
 .sticky{
@@ -92,7 +125,9 @@ position: fixed;
 top: 0;
 width: 100%;
 }
-
+.sticky + #mover{
+    padding-top: 65px;
+}
 .encabezado .logo img{
     width: 230px;
     padding-right: .5rem;
@@ -108,6 +143,7 @@ width: 100%;
     cursor: pointer;
     margin-left: auto;
 }
+
 /* ESTILOS MENUS */
 .dropdown-menu{
     border: 1px solid $primario;
@@ -126,11 +162,11 @@ width: 100%;
 
 
 /*--------------------------------------
-    SECCION BIENVENIDOS
++++++++++SECCION BIENVENIDOS++++++++++++
 -----------------------------------------*/
 .bienvenidos{
-    background: url('../img/1x/inicio-fondo2-100.jpg') no-repeat center top;
-    color: white;
+    background: url('../img/1x/fondo-inicio-md-100.jpg') no-repeat center top;
+    color: $texto;
     background-attachment: fixed !important;
     background-size: cover;
     height: 100vh;
@@ -156,20 +192,62 @@ width: 100%;
 /*   TEXTO CENTRAL */
 .bienvenidos .texto h1{
     display:inline-block;
-    font-size: 2.2rem;
+    font-size: 3rem;
 }
 
 .bienvenidos .texto p{
-    font-size: 1.8rem;
+    font-size: 2rem;
     display: inline-block;
     height: 120px;
 }
 
+/*--------------------------------------
++++++++++SECCION SERVICIOS++++++++++++
+-----------------------------------------*/
+.servicios .bloque-contenido{
+    display: flex;
+    align-items: center;
+}
+.servicios .bloque-contenido i{
+    display: inline-block;
+    padding:  0 .5rem 0 .3rem;
+    background-color: $primario;
+    color: $texto;
+    text-align: center;
+    border-radius: 1rem;
+    min-height: 5rem;
+    min-width: 5rem;
+    padding: 1rem .2rem;
+}
+.servicios h3{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    flex: 1 1 100%
+}
+
+.servicios article:after{
+    content: '\f0da';
+    font-family: 'FontAwesome';
+    position: relative; //no afecta la pocision de las demás cosas
+    transition: all 2s ease;
+    font-size: 2rem
+}
+.servicios article:hover::after{
+    left: -.5rem;
+    opacity: 1;
+    color: $primario;
+}
 /*--------------------------------
-++++MEDIA´S QUERY++++
+++++++++++++++MEDIA´S QUERY++++++++++
 ------------------------------------*/
 
+//TAMAÑOS MEDIANOS
 @media (min-width:768px){
+    
+    //carga de imagen de fondo de la pantalla mediana
     .navbar .container{
         position: relative;
     }
@@ -192,7 +270,6 @@ width: 100%;
         text-align: left;
     }
     .bienvenidos .texto p{
-
     height: 50px;
     }
     .bienvenidos .texto .container{
@@ -202,6 +279,18 @@ width: 100%;
     
         
     }
+//TAMAÑOS GRANDES 
+@media (min-width: 1024px){
+    //carga de imagen de fondo de la pantalla grande
+    .bienvenidos{
+    background: url('../img/1x/inicio-fondo2-100.jpg') no-repeat center top;
+        background-attachment: fixed !important;
+    background-size: cover;
+}
+    
+    
+    
+}
 
 
 

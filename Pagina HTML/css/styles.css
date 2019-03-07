@@ -1,10 +1,17 @@
 @charset "UTF-8";
+/*---------------------------
+    ESTILOS GENERALES
+----------------------------*/
 html {
   font-size: 13px; }
 
 body {
   font-family: 'arial';
-  color: #F8F9FA; }
+  color: #004967; }
+
+.titulo {
+  font-size: 2.25rem;
+  font-weight: bold; }
 
 /*--------------------------------------
  ESTILOS GENERALES DE LOS BOTONES
@@ -53,6 +60,28 @@ body {
 .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 73, 103, 0.5) !important; }
 
+/*---------------------------
+    ESTILOS CONTENIDO
+----------------------------*/
+.cabeza-contenido .separador-titulos {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  height: 7px;
+  width: 100%;
+  background: #004967; }
+
+.cabeza-contenido .titulo {
+  border-left: solid;
+  border-width: 8px;
+  padding-left: 1rem; }
+
+.cabeza-contenido P {
+  font-size: 1.4rem; }
+
+/*--------------------------------------
++++++++++CABEZA DE INICIO++++++++++++
+-----------------------------------------*/
 .cabeza {
   background: #343A40 !important;
   color: #F8F9FA;
@@ -62,15 +91,18 @@ body {
   margin: 0 1rem; }
 
 /*--------------------------------------
- ENCABEZADO
+ ++++++++++++++ENCABEZADO+++++++++++++++
 -----------------------------------------*/
 .encabezado {
-  margin-rigth: 0; }
+  z-index: 100; }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%; }
+
+.sticky + #mover {
+  padding-top: 65px; }
 
 .encabezado .logo img {
   width: 230px;
@@ -103,11 +135,11 @@ body {
   color: rgba(0, 0, 0, 0.5); }
 
 /*--------------------------------------
-    SECCION BIENVENIDOS
++++++++++SECCION BIENVENIDOS++++++++++++
 -----------------------------------------*/
 .bienvenidos {
-  background: url("../img/1x/inicio-fondo2-100.jpg") no-repeat center top;
-  color: white;
+  background: url("../img/1x/fondo-inicio-md-100.jpg") no-repeat center top;
+  color: #F8F9FA;
   background-attachment: fixed !important;
   background-size: cover;
   height: 100vh;
@@ -128,15 +160,53 @@ body {
 /*   TEXTO CENTRAL */
 .bienvenidos .texto h1 {
   display: inline-block;
-  font-size: 2.2rem; }
+  font-size: 3rem; }
 
 .bienvenidos .texto p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   display: inline-block;
   height: 120px; }
 
+/*--------------------------------------
++++++++++SECCION SERVICIOS++++++++++++
+-----------------------------------------*/
+.servicios .bloque-contenido {
+  display: flex;
+  align-items: center; }
+
+.servicios .bloque-contenido i {
+  display: inline-block;
+  padding: 0 .5rem 0 .3rem;
+  background-color: #004967;
+  color: #F8F9FA;
+  text-align: center;
+  border-radius: 1rem;
+  min-height: 5rem;
+  min-width: 5rem;
+  padding: 1rem .2rem; }
+
+.servicios h3 {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  flex: 1 1 100%; }
+
+.servicios article:after {
+  content: '\f0da';
+  font-family: 'FontAwesome';
+  position: relative;
+  transition: all 2s ease;
+  font-size: 2rem; }
+
+.servicios article:hover::after {
+  left: -.5rem;
+  opacity: 1;
+  color: #004967; }
+
 /*--------------------------------
-++++MEDIA´S QUERY++++
+++++++++++++++MEDIA´S QUERY++++++++++
 ------------------------------------*/
 @media (min-width: 768px) {
   .navbar .container {
@@ -163,5 +233,10 @@ body {
 
   .bienvenidos .texto .container {
     align-items: stretch; } }
+@media (min-width: 1024px) {
+  .bienvenidos {
+    background: url("../img/1x/inicio-fondo2-100.jpg") no-repeat center top;
+    background-attachment: fixed !important;
+    background-size: cover; } }
 
 /*# sourceMappingURL=styles.css.map */
