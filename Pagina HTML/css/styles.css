@@ -206,6 +206,87 @@ body {
   color: #004967; }
 
 /*--------------------------------
+++++++++++++++EXPERIENCIA++++++++++
+------------------------------------*/
+.experiencia ul {
+  list-style: none;
+  margin-bottom: 0; }
+
+.experiencia ul li {
+  margin: 2rem 0; }
+
+.experiencia ul li h4 {
+  margin-top: .5rem;
+  margin-bottom: 0;
+  font-weight: bold; }
+
+.experiencia ul li i {
+  display: inline-block;
+  color: #F8F9FA;
+  background-color: #004967;
+  border-radius: 1rem;
+  height: 5rem !important;
+  width: 5rem  !important;
+  padding: 1rem .2rem; }
+
+.experiencia .image {
+  justify-content: center; }
+
+.experiencia .image img {
+  flex: 0 1 100%; }
+
+/*--------------------------------
+++++++++++++++NOSOTROS++++++++++
+------------------------------------*/
+.nosotros .billete {
+  max-width: 15rem; }
+
+/*--------------------------------
+++++++++++++++CLIENTES++++++++++
+------------------------------------*/
+.owl-carousel .item {
+  text-decoration: none; }
+
+.owl-carousel h4 {
+  color: #004967;
+  margin: 1rem 0 1rem 0;
+  font-size: 1.5rem; }
+
+.item img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.owl-carousel i {
+  color: #004967;
+  display: inline-block; }
+
+.owl-nav div {
+  display: inline-block;
+  margin: 0 .5rem;
+  font-size: 4rem; }
+
+.redes {
+  background-color: #343A40;
+  color: #F8F9FA;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem; }
+
+.redes p {
+  margin: 0 1rem 0 1rem; }
+
+.redes a {
+  color: #F8F9FA;
+  font-size: 4rem;
+  opacity: .7;
+  margin: 0 .5rem;
+  transition: all 3rem ease; }
+
+.redes a:hover {
+  opacity: 1; }
+
+/*--------------------------------
 ++++++++++++++MEDIA´S QUERY++++++++++
 ------------------------------------*/
 @media (min-width: 768px) {
@@ -232,7 +313,18 @@ body {
     height: 50px; }
 
   .bienvenidos .texto .container {
-    align-items: stretch; } }
+    align-items: stretch; }
+
+  .experiencia ul li {
+    margin: 2rem 0;
+    display: flex; }
+
+  .experiencia ul li i {
+    min-height: 5rem;
+    min-width: 5rem; }
+
+  .experiencia ul li p {
+    padding-left: 1rem; } }
 @media (min-width: 1024px) {
   .bienvenidos {
     background: url("../img/1x/inicio-fondo2-100.jpg") no-repeat center top;
