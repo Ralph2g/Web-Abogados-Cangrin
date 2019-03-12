@@ -104,11 +104,11 @@
         <div class="texto" id="mover">
         
                <div class="container">
-                <h1 class="font-weight-bold ">
+                <h1 class="font-weight-bold" id="titulo-principal">
                     SERVICIOS DE CONTABILIDAD
                 </h1>
                 
-                <p>
+                <p id="descripcion-principal">
                     Te ayudamos con <br class="d-md-none"><u><span class="typed"> </span></u>
                 <p>
                 <button class="btn btn-primary">CONTÁCTANOS</button>
@@ -122,51 +122,57 @@
     <main class="servicios">
         <div class="container">
         <!--Encabezado-->
-          
+          <img class="d-none d-md-inline-block"src="img/trabajo-izq-100.jpg" alt="Imagen-trabajo" id="izq">
+          <img class="d-none d-md-inline-block"src="img/contrato-der-100.jpg" alt="Imagen-contrato" id="der">
            <header class="cabeza-contenido">
                 <span class="separador-titulos"></span>
                 <h2 class="titulo">Nuestros Servicios</h2>
                 <p class="lead text-center text-md-left">
-                    CONOCE NUESTRA LISTA DE SERVICIOS QUE TENEMEMOS               </p>
+                    CONOCE NUESTRA LISTA DE SERVICIOS QUE TENEMEMOS
+                </p>
            </header>
            
            <!--Contenido-->
             <div class="row">
-                <article class="bloque-contenido col-12">
+                <article class="bloque-contenido col-12 col-md-3">
                     <i class="fa fa-group fa-3x my-3"></i>
                     <h3>CONTABILIDAD DE PERSONAS FISICAS & MORALES</h3>
                 </article>
-                <article class="bloque-contenido col-12">
+                <article class="bloque-contenido col-12 col-md-3">
                     <i class="fa fa-line-chart fa-3x my-3"></i>
                     <h3>DECLARACIONES MENSUALES & ANUALES</h3>
                 </article>
-                <article class="bloque-contenido col-12">
+                <article class="bloque-contenido col-12 col-md-3">
                     <i class="fa fa-calculator fa-3x my-3"></i>
                     <h3>DEVOLUCIONES Y/O COMPENSACIÓN DE IMPUESTOS</h3>
                 </article>
-                <article class="bloque-contenido col-12">
+                <article class="bloque-contenido col-12 col-md-3">
                     <i class="fa fa-search fa-3x my-3"></i>
                     <h3>AUDITORIAS FISCALES & LABORALES</h3>
                 </article>
-                <article class="bloque-contenido col-12">
-                    <i class="fa fa-bank fa-3x my-3"></i>
+                <article class="bloque-contenido col-12 offset-md-4 col-md-2">
+                    <i class="fa fa-tag fa-3x my-3"></i>
                     <h3>PATENTAR MARCAS</h3>
                 </article>
-                <article class="bloque-contenido col-12">
-                    <i class="fa fa-handshake-o fa-3x my-3"></i>
+                <article class="bloque-contenido col-12 col-md-2">
+                    <i class="fa fa-bank fa-3x my-3"></i>
                     <h3>TRÁMITES DEPENDENCIAS GUBERNAMENTALES</h3>
                 </article>
-                <article class="bloque-contenido col-12">
-                    <i class="fa fa-laptop fa-3x my-3"></i>
+                <article class="bloque-contenido col-12 col-md-12">
+                    <i class="fa fa-handshake-o fa-3x my-3"></i>
                     <h3>SERVICIOS DE OUTSOURCING</h3>
                 </article>
-                <article class="bloque-contenido col-12">
+                <article class="bloque-contenido col-12 offset-md-3 col-md-2">
+                    <i class="fa fa-laptop fa-3x my-3"></i>
+                    <h3>FACTURACIÓN ELECTRÓNICA</h3>
+                </article>
+                <article class="bloque-contenido col-12 col-md-2">
                     <i class="fa fa-book fa-3x my-3"></i>
                     <h3>SERVICIOS DE OUTSOURCING</h3>
                 </article>
-                <article class="bloque-contenido col-12">
+                <article class="bloque-contenido col-12 col-md-2">
                     <i class="fa fa-black-tie fa-3x my-3"></i>
-                    <h3>SERVICIOS DE OUTSOURCING</h3>
+                    <h3>APERTURA DE SOCIEDADES</h3>
                 </article>
 
             </div>
@@ -252,11 +258,11 @@
                 SIEMPRE AL TANTO DE LAS NUEVAS NOTICIAS FISCALES</p>
             </header>
           
-           <div class="row">
+           <div class="cuerpo row">
                 <img class="imagen col-12 d-md-none" src="svg/libro-sm.svg">
                 <img class="imagen d-none d-md-inline-block col-6" src="svg/libro-md.svg">
-                <div class="col-12 col-md-6">
-                   <h4>Resolucion Misceláneas Fiscales</h4>
+                <div class="col-12 col-md-6 my-3">
+                   <h4 class="text-center text-md-left">Resolucion Misceláneas Fiscales</h4>
                    <p class="d-none d-md-inline-block">
                         Estamos al tanto de consultar la Resolución Miscelánea 
                         Fiscal vigente y sus anexos, así como también otros 
@@ -265,20 +271,20 @@
                 </div>
                 
                 <img class="billete col-12 d-md-none" src="svg/dinero-sm.svg">
-                <div class="col-12 col-md-6">
-                   <h4>Ley Antilavado de Dinero</h4>
-                   <p class="d-none d-md-inline-block">
+                <div class="col-12 col-md-6 my-3">
+                   <h4 class="text-center text-md-right">Ley Antilavado de Dinero</h4>
+                   <p class="d-none d-md-inline-block text-right">
                        Te asesoramos en el cumplimiento de a ley federal para la 
                         prevención e identificación de operaciones con recursos de procedencia Ilícita.
                    </p>
                 </div>
-                <img class="billete d-none d-md-inline-block col-6" src="svg/dinero-sm.svg">
+                <img class="billete d-none d-md-inline-block col-6" src="svg/billete-md.svg">
                 
                 
                 <img class="imagen col-12 d-md-none" src="svg/ISR-sm.svg">
                 <img class="imagen d-none d-md-inline-block col-6" src="svg/ISR-md.svg">
-                <div class="col-12 col-md-6">
-                   <h4>ISR e IVA</h4>
+                <div class="col-12 col-md-6 mt-3">
+                   <h4 class="text-center text-md-left">ISR e IVA</h4>
                    <p class="d-none d-md-inline-block">
                        De acuerdo a la ley del ISR y ley del IVA, determinamos las tasas de impuestos que deben ser pagadas, según el nivel de ingresos. 
                    </p>
@@ -373,7 +379,7 @@
                                 <input type="hidden" name="_honeypot" value="">
                                 <input type="hidden" name="_confirmation" value="">
                                 <input type="submit" class="btn btn-primary" value="Enviar" id="enviar">
-                                <button type="reset" class="btn btn-primary">Limpiar</button>
+                                <button type="reset" class="btn" id="reset">Limpiar</button>
                             </div>
                         </div>
                     </form>
@@ -385,7 +391,7 @@
                     <p class="d-none d-md-block">Agenda tu visita con nosotros y conoce nuestro trabajo</p>
                     <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5086451677007!2d-99.17535468532184!3d19.390416986908253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff73fe432fb7%3A0x6d61be097a96934e!2sDigital+pc+networks!5e0!3m2!1ses!2smx!4v1544670105780" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> 
                     <p class="text-center mb-0 d-none d-md-block">Av. Insurgentes Sur #800 Col. del Valle</p>
-                    <p class="text-center">Correo: onqubit@gmail.com WhatsApp: (55)-6886-3044</p>
+                    <p class="text-center mb-0">Correo: onqubit@gmail.com WhatsApp: (55)-6886-3044</p>
                 </div>          
             </div>
         </div>
@@ -393,10 +399,9 @@
     
     
 <!--FIN de la página de CONTACTO / INICIO página de FOOTER-->
-    <footer class="redes">
+    <footer class="redes mt-4 py-2">
                
-    <p>2004©
-        <br>Servicios Multifuncionales Cangri S.A de C.V
+    <p>2004 © <br>Servicios Multifuncionales Cangri S.A de C.V
         <br>“Servicios de Contabilidad”, todos los derechos reservados.
     </p>
     <!------------------emoticonos de referencia----------------------------->
@@ -477,12 +482,12 @@
                 items:2,
                 margin:20,
             },
-            800:{
-                items:2,
-                margin:30,
+            768:{
+                items:3,
+                margin:20,
             
             },
-            1000:{
+            992:{
                 items:4,
                 margin:20,
             }

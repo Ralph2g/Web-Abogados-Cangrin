@@ -7,7 +7,8 @@ html {
 
 body {
   font-family: 'arial';
-  color: #004967; }
+  color: #004967;
+  background: #f8f9fa; }
 
 .titulo {
   font-size: 2.25rem;
@@ -44,6 +45,18 @@ body {
 .btn:hover:after {
   left: .8rem;
   transform: rotateZ(-373deg); }
+
+#reset:after {
+  content: ''; }
+
+#reset {
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  background: darkgray; }
+
+#enviar {
+  font-size: 1.2rem;
+  padding: .5rem 1rem; }
 
 /*BOton Primario */
 .btn-primary {
@@ -170,6 +183,21 @@ body {
 /*--------------------------------------
 +++++++++SECCION SERVICIOS++++++++++++
 -----------------------------------------*/
+.servicios .container {
+  position: relative; }
+
+.servicios #izq {
+  position: absolute;
+  left: 0;
+  height: 10rem;
+  top: 30rem; }
+
+.servicios #der {
+  position: absolute;
+  right: 0;
+  height: 10rem;
+  top: 30rem; }
+
 .servicios .bloque-contenido {
   display: flex;
   align-items: center; }
@@ -233,13 +261,18 @@ body {
   justify-content: center; }
 
 .experiencia .image img {
-  flex: 0 1 100%; }
+  flex: 0 0 100%; }
 
 /*--------------------------------
 ++++++++++++++NOSOTROS++++++++++
 ------------------------------------*/
+.nosotros .cuerpo div h4 {
+  text-align: center; }
+
 .nosotros .billete {
-  max-width: 15rem; }
+  max-height: 6rem;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 /*--------------------------------
 ++++++++++++++CLIENTES++++++++++
@@ -266,19 +299,26 @@ body {
   margin: 0 .5rem;
   font-size: 4rem; }
 
+/*--------------------------------
+++++++++++++++CONTACTO++++++++++
+------------------------------------*/
+.contactanos p {
+  font-size: 1.2rem; }
+
 .redes {
   background-color: #343A40;
   color: #F8F9FA;
   text-align: center;
   text-decoration: none;
-  font-size: 1.4rem; }
+  font-size: .85rem; }
 
 .redes p {
-  margin: 0 1rem 0 1rem; }
+  margin: 0 1rem 0 1rem;
+  opacity: .7; }
 
 .redes a {
   color: #F8F9FA;
-  font-size: 4rem;
+  font-size: 1.5rem;
   opacity: .7;
   margin: 0 .5rem;
   transition: all 3rem ease; }
@@ -290,6 +330,9 @@ body {
 ++++++++++++++MEDIA´S QUERY++++++++++
 ------------------------------------*/
 @media (min-width: 768px) {
+  html {
+    font-size: 15px; }
+
   .navbar .container {
     position: relative; }
 
@@ -302,33 +345,86 @@ body {
     left: 0; }
 
   .bienvenidos .texto h1 {
-    font-size: 3rem;
-    margin-bottom: 0; }
+    font-size: 3rem; }
 
   .bienvenidos .texto h1,
   .bienvenidos .texto p {
     text-align: left; }
 
   .bienvenidos .texto p {
-    height: 50px; }
+    height: 50px;
+    font-size: 1.8rem; }
 
   .bienvenidos .texto .container {
     align-items: stretch; }
 
+  /*--------------------------------
+  ++++++++++++++NOSOTROS++++++++++
+  ------------------------------------*/
+  .nosotros .cuerpo div h4 {
+    font-weight: bold; }
+
+  .nosotros .billete {
+    max-height: 8rem;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
   .experiencia ul li {
     margin: 2rem 0;
-    display: flex; }
+    display: flex;
+    min-height: 115.5px; }
 
   .experiencia ul li i {
     min-height: 5rem;
     min-width: 5rem; }
 
   .experiencia ul li p {
-    padding-left: 1rem; } }
-@media (min-width: 1024px) {
+    padding-left: 1rem; }
+
+  /*+++++++++++++++++++++++++++
+  Seccion nuestros Experiencia:
+  +++++++++++++++++++++++++++++*/
+  .servicios article:after {
+    content: ''; }
+
+  .servicios .bloque-contenido {
+    align-items: center;
+    flex-direction: column; }
+
+  .servicios .bloque-contenido i {
+    display: inline-block;
+    padding: 0 .5rem 0 .3rem;
+    background-color: #004967;
+    color: #F8F9FA;
+    text-align: center;
+    border-radius: 1rem;
+    min-height: 5rem;
+    min-width: 5rem;
+    padding: 1rem .2rem; }
+
+  .owl-carousel h4 {
+    color: #004967;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.3rem; } }
+@media (min-width: 992px) {
   .bienvenidos {
     background: url("../img/1x/inicio-fondo2-100.jpg") no-repeat center top;
     background-attachment: fixed !important;
-    background-size: cover; } }
+    background-size: cover; }
+
+  #titulo-principal {
+    font-size: 3.5rem; }
+
+  .servicios #izq {
+    height: 13rem; }
+
+  .servicios #der {
+    height: 13rem; } }
+@media (min-width: 1200px) {
+  #titulo-principal {
+    font-size: 4rem; }
+
+  .experiencia .image img {
+    flex: 0 0 80%; } }
 
 /*# sourceMappingURL=styles.css.map */

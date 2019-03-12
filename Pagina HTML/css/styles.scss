@@ -14,6 +14,7 @@ html{
 body{
     font-family: 'arial';
     color: $primario;
+    background: #f8f9fa;
 }
 .titulo{
     font-size: 2.25rem;
@@ -48,14 +49,26 @@ body{
     margin-left: 5rem;
 }
 #pymes:after{
-        content: '\f0b1';
+    content: '\f0b1';
     font-family: 'FontAwesome';
 }
 .btn:hover:after{
     left: .8rem;
     transform: rotateZ(-373deg)
 }
+#reset:after{
+    content: '';
+}
 
+#reset{
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    background: darkgray;
+}
+#enviar{
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+}
 /*BOton Primario */
 
 .btn-primary{
@@ -204,10 +217,32 @@ width: 100%;
 /*--------------------------------------
 +++++++++SECCION SERVICIOS++++++++++++
 -----------------------------------------*/
+.servicios .container{
+    position: relative;
+}
+
+//Configuracion imagenes
+
+.servicios #izq{
+    position: absolute;
+    left: 0;
+    height: 10rem;
+    top: 30rem;
+}
+
+.servicios #der{
+    position: absolute;
+    right: 0;
+    height: 10rem;
+    top: 30rem;
+    
+}
+
 .servicios .bloque-contenido{
     display: flex;
     align-items: center;
 }
+
 .servicios .bloque-contenido i{
     display: inline-block;
     padding:  0 .5rem 0 .3rem;
@@ -219,6 +254,7 @@ width: 100%;
     min-width: 5rem;
     padding: 1rem .2rem;
 }
+
 .servicios h3{
     display: inline-block;
     font-size: 1rem;
@@ -274,18 +310,21 @@ width: 100%;
     justify-content: center;
 }
 .experiencia .image img{
-    flex: 0 1 100%;
+    flex: 0 0 100%
     
 }
 /*--------------------------------
 ++++++++++++++NOSOTROS++++++++++
 ------------------------------------*/
-.nosotros .imagen{
-    
+.nosotros .cuerpo div h4{
+    text-align: center;
 }
 
 .nosotros .billete{
- max-width: 15rem;   
+    max-height: 6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 
 /*--------------------------------
@@ -319,6 +358,12 @@ width: 100%;
     margin: 0 .5rem;
     font-size: 4rem
 }
+/*--------------------------------
+++++++++++++++CONTACTO++++++++++
+------------------------------------*/
+.contactanos p{
+    font-size: 1.2rem;
+}
 
 //*********************FOOTER*****************+
 
@@ -327,18 +372,21 @@ width: 100%;
     color: $texto;
     text-align: center; //tienes que usar flexbox
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: .85rem;
+    
 }
 .redes p{
     margin: 0 1rem 0 1rem;
+    opacity: .7;
 }
 
 .redes a{
     color: $texto;
-    font-size: 4rem;
+    font-size: 1.5rem;
     opacity: .7;
     margin: 0 .5rem;
     transition: all 3rem ease;
+
 }
 
 .redes a:hover{
@@ -352,6 +400,9 @@ width: 100%;
 
 //TAMAÑOS MEDIANOS
 @media (min-width:768px){
+    html{
+    font-size: 15px;
+    }
     
     //carga de imagen de fondo de la pantalla mediana
     .navbar .container{
@@ -367,9 +418,8 @@ width: 100%;
         width: 100%;
         left: 0;
     }
-    .bienvenidos .texto h1,{
+    .bienvenidos .texto h1{
        font-size: 3rem;
-        margin-bottom: 0;
     }
     .bienvenidos .texto h1,
     .bienvenidos .texto p{
@@ -377,39 +427,106 @@ width: 100%;
     }
     .bienvenidos .texto p{
     height: 50px;
+    font-size: 1.8rem
     }
     .bienvenidos .texto .container{
         align-items: stretch;
     }
     
-    //Seccion nuestros servicios:
-.experiencia ul li{
-    margin: 2rem 0;
-    display: flex;
+/*--------------------------------
+++++++++++++++NOSOTROS++++++++++
+------------------------------------*/
+.nosotros .cuerpo div h4{
+    font-weight: bold;
+}
+    .nosotros .billete{
+    max-height: 8rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
     
-.experiencia ul li i{
-    min-height: 5rem;
-    min-width: 5rem;
-}
-    
-.experiencia ul li p{
-    padding-left: 1rem;
-}
-    
-        
+    //Seccion nuestros Experiencia:
+    .experiencia ul li{
+        margin: 2rem 0;
+        display: flex;
+        min-height: 115.5px;
     }
-//TAMAÑOS GRANDES 
-@media (min-width: 1024px){
+    
+    .experiencia ul li i{
+        min-height: 5rem;
+        min-width: 5rem;
+    }
+    
+    .experiencia ul li p{
+        padding-left: 1rem;
+    }
+/*+++++++++++++++++++++++++++
+Seccion nuestros Experiencia:
++++++++++++++++++++++++++++++*/
+
+    //Eliminación de la flecha
+    .servicios article:after{
+        content: '';
+    }
+    
+    .servicios .bloque-contenido{
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .servicios .bloque-contenido i{
+        display: inline-block;
+        padding:  0 .5rem 0 .3rem;
+        background-color: $primario;
+        color: $texto;
+        text-align: center;
+        border-radius: 1rem;
+        min-height: 5rem;
+        min-width: 5rem;
+        padding: 1rem .2rem;
+    }
+    
+    //CLIENTES
+    .owl-carousel h4{
+    color: $primario;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.3rem;
+}
+}
+
+//TAMAÑOS GRANDES
+@media (min-width: 992px){
     //carga de imagen de fondo de la pantalla grande
     .bienvenidos{
     background: url('../img/1x/inicio-fondo2-100.jpg') no-repeat center top;
         background-attachment: fixed !important;
     background-size: cover;
+    }
+    
+    #titulo-principal{
+        font-size:3.5rem;
+    }
+    .servicios #izq{
+        height: 13rem;
+    }
+
+    .servicios #der{
+        height: 13rem;
+    }
+
 }
+
+//TAMAÑOS GIGANTES
+@media (min-width: 1200px){
+
+    #titulo-principal{
+        font-size:4rem;
+    }
+        .experiencia .image img{
+    flex: 0 0 80%
     
-    
-    
+}
 }
 
 
