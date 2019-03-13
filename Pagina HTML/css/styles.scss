@@ -59,9 +59,9 @@ body{
 }
 
 .scorll-menu-out div {
-    width: 16px;
-    height: 16px;
-    background: url(../svg/dinero.svg);
+    width: .6rem;
+    height: .6rem;
+    background: url(../svg/circulo.svg);
     margin-left: 18px;
     margin-right: 20px;
     margin-top: 8px;
@@ -70,9 +70,9 @@ body{
 }
 
 .scorll-menu-in div {
-    width: 14px;
-    height: 16px;
-    background: url(/themes/custom/simple/images/coin.svg);
+    width: .9rem;
+    height: .9rem;
+    background: url(../svg/dinero.svg);
     margin-left: 17px;
     margin-right: 17px;
     margin-top: 8px;
@@ -484,9 +484,13 @@ width: 100%;
     
     .mega-menu .dropdown-menu{
         position: relative;
-        width: 100%;
-        left: 0;
+        max-width: 70%;
+        left: 20%;
     }
+    .dropdown-menu {
+        min-width: 19rem;
+    }
+    
     .bienvenidos .texto h1{
        font-size: 3rem;
     }
@@ -572,6 +576,10 @@ Seccion nuestros Experiencia:
         background-attachment: fixed !important;
     background-size: cover;
     }
+    .mega-menu .dropdown-menu{
+        
+        left: auto;
+    }
     
     #titulo-principal{
         font-size:3.5rem;
@@ -599,6 +607,12 @@ Seccion nuestros Experiencia:
     flex: 0 0 80%
     
 }
+}
+
+
+@media (min-width: 1500px){
+
+    
 }
 
 
