@@ -15,6 +15,67 @@ body {
   font-weight: bold; }
 
 /*--------------------------------------
+ ESTILOS MENU SCROLL
+-----------------------------------------*/
+#menu-scroll {
+  color: #F8F9FA;
+  position: fixed;
+  height: calc(100% - 50px);
+  width: 10rem;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 73, 103, 0.5);
+  border-color: white;
+  border-style: solid;
+  border-width: .05rem;
+  border-right: none;
+  align-items: center; }
+
+#menu-scroll div {
+  transition: all 0.3s;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.scroll-menu-inter div {
+  width: 1px;
+  height: 32px;
+  background: rgba(250, 250, 250, 0.6);
+  margin-left: 23px;
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.scorll-menu-out div {
+  width: 16px;
+  height: 16px;
+  background: url(../svg/dinero.svg);
+  margin-left: 18px;
+  margin-right: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer; }
+
+.scorll-menu-in div {
+  width: 14px;
+  height: 16px;
+  background: url(/themes/custom/simple/images/coin.svg);
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer; }
+
+#menu-scroll a {
+  color: #f8f9fa;
+  opacity: .7; }
+
+#menu-scroll a:hover {
+  opacity: 1;
+  text-decoration: none;
+  font-weight: bold; }
+
+/*--------------------------------------
  ESTILOS GENERALES DE LOS BOTONES
 -----------------------------------------*/
 .btn {
@@ -190,13 +251,13 @@ body {
   position: absolute;
   left: 0;
   height: 10rem;
-  top: 30rem; }
+  top: 33rem; }
 
 .servicios #der {
   position: absolute;
   right: 0;
-  height: 10rem;
-  top: 30rem; }
+  height: 14rem;
+  top: 32rem; }
 
 .servicios .bloque-contenido {
   display: flex;
@@ -261,7 +322,8 @@ body {
   justify-content: center; }
 
 .experiencia .image img {
-  flex: 0 0 100%; }
+  min-width: 289px;
+  max-width: 290px; }
 
 /*--------------------------------
 ++++++++++++++NOSOTROS++++++++++
@@ -416,10 +478,13 @@ body {
     font-size: 3.5rem; }
 
   .servicios #izq {
-    height: 13rem; }
+    top: 30rem;
+    height: 14rem; }
 
   .servicios #der {
-    height: 13rem; } }
+    right: 1rem;
+    top: 28rem;
+    height: 20rem; } }
 @media (min-width: 1200px) {
   #titulo-principal {
     font-size: 4rem; }
