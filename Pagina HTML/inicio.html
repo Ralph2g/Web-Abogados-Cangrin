@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/styles.css">
     
 </head>
-<body data-spy="scroll" data-target="#menu-scroll" data-offset="50">
+<body>
   
   
   <div class="d-none d-xl-flex pt-lg-0" id="menu-scroll">
@@ -29,6 +29,13 @@
             <tr>
                <th></th><th href="#servicios"><p class="pt-md-5">Menú</p></th>
             </tr>
+            
+            
+            <tr class="scorll-menu-out">
+                <td><div class="s-m-anchor" href="#s-m-id-5"></div></td>
+                <td><a class="s-m-anchor activo" href="#bienvenidos">Inicio</a></td>
+            </tr>
+           <tr class="scroll-menu-inter"><td><div></div></td><td></td></tr>
             <tr class="scorll-menu-out"><td><div class="s-m-anchor" href="#s-m-id-1"></div></td>
                 <td><a class="s-m-anchor" href="#servicios" data-target="#servicios">
                 Servicios
@@ -70,7 +77,7 @@
         
    <div>
    </div>
-    <section class="bienvenidos" id="bienvenidos">
+    <section class="bienvenidos section" id="bienvenidos">
            <div class="cabeza">               
            <div class="container">
             <div class="row justify-content-between justify-content-md-end">
@@ -170,7 +177,7 @@
             
     </section>
 <!--FIN de la página de inicio / INICIO página de servicios-->       
-    <main class="servicios" id="servicios">
+    <main class="servicios section" id="servicios">
         <div class="container">
         <!--Encabezado-->
           <img class="d-none d-md-inline-block"src="img/trabajo-izq-100.png" alt="Imagen-trabajo" id="izq">
@@ -232,7 +239,7 @@
     
     
 <!--FIN de la página de servicios / INICIO página de experiencia-->
-    <section class="experiencia" id="experiencia">
+    <section class="experiencia section" id="experiencia">
        <div class="container">
             <header class="cabeza-contenido">
                 <span class="separador-titulos"></span>
@@ -300,7 +307,7 @@
     
     
 <!--FIN de la página de EXPERIENCIA / INICIO página de NOSOTROS-->
-    <section class="nosotros" id="nosotros">
+    <section class="nosotros section" id="nosotros">
        <div class="container">
             <header class="cabeza-contenido">
                 <span class="separador-titulos"></span>
@@ -346,7 +353,7 @@
     
     
 <!--FIN de la página de NOSOTROS / INICIO página de CLIENTES-->
-    <section class="clientes mt-md-4" id="clientes">
+    <section class="clientes mt-md-4 section" id="clientes">
       <div class="container">
             <header class="cabeza-contenido">
                 <span class="separador-titulos"></span>
@@ -384,7 +391,7 @@
     
     
 <!--FIN de la página de CLIENTES / INICIO página de CONTACTO-->
-    <section class="contactanos py-lg-3" id="contactanos">
+    <section class="contactanos py-lg-3 section" id="contactanos">
         <div class="container">
             <header class="cabeza-contenido">
                 <span class="separador-titulos"></span>
@@ -566,6 +573,26 @@
                 ayuwoki.classList.remove("sticky");
                 }
             }
+        
+        //Spy scroll
+function functionScroll() {
+    var section = document.querySelectorAll(".section"),
+        sections = {}, i = 0;
+
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+    for (i in sections) {
+      if (sections[i] <= window.pageYOffset +100) {
+        document.querySelector('.activo').classList.remove('activo');
+        document.querySelector('a[href*=' + i + ']').classList.add('activo');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', functionScroll);
+  window.addEventListener('resize', functionScroll);
 
             
             

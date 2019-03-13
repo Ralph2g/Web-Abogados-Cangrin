@@ -75,6 +75,13 @@ body {
   text-decoration: none;
   font-weight: bold; }
 
+.activo {
+  font-weight: bold;
+  color: #F8F9FA;
+  opacity: 1;
+  font-size: 1rem;
+  text-decoration: underline; }
+
 /*--------------------------------------
  ESTILOS GENERALES DE LOS BOTONES
 -----------------------------------------*/
