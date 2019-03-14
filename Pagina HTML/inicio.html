@@ -31,23 +31,20 @@
             </tr>
             
             
-            <tr class="scorll-menu-out">
-                <td><div class="s-m-anchor" href="#s-m-id-5"></div></td>
+            <tr class="scorll-menu-out activo">
+                <td><div class="s-m-anchor" href="#bienvenidos"></div></td>
                 <td><a class="s-m-anchor activo" href="#bienvenidos">Inicio</a></td>
             </tr>
            <tr class="scroll-menu-inter"><td><div></div></td><td></td></tr>
             <tr class="scorll-menu-out"><td><div class="s-m-anchor" href="#s-m-id-1"></div></td>
-                <td><a class="s-m-anchor" href="#servicios" data-target="#servicios">
-                Servicios
-                </a></td>
+                <td><a class="s-m-anchor" href="#servicios">Servicios</a></td>
             </tr>
             
             <tr class="scroll-menu-inter"><td><div></div></td><td></td></tr>
             
             <tr class="scorll-menu-out">
                 <td><div class="s-m-anchor" href="#s-m-id-2"></div></td>
-                <td><a class="s-m-anchor" href="#experiencia">
-                Experiencia</a></td>
+                <td><a class="s-m-anchor" href="#experiencia">Experiencia</a></td>
             </tr>
             
             <tr class="scroll-menu-inter"><td><div></div></td><td></td></tr>
@@ -119,21 +116,21 @@
                           <section class="row px-2">
                             <div class="col-12 col-md-6">
                                 
-                            <a href="#" class="dropdown-item">Cont. de personas físicas/morales</a>
-                            <a href="#" class="dropdown-item">Declaraciones mensuales/ anuales</a>
-                            <a href="#" class="dropdown-item">Devoluciones de impuestos</a>
-                            <a href="#" class="dropdown-item">Auditorias fiscales/laborales</a>
-                            <a href="#" class="dropdown-item">Patentar marcas</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-group"></i>Cont. de personas físicas/morales</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-line-chart"></i>Declaraciones mensuales/ anuales</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-calculator"></i>Devoluciones de impuestos</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-search"></i>Auditorias fiscales/laborales</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-tag"></i>Patentar marcas</a>
                             
                             </div>
                             
                             <div class="col-6 col-md-6">
                             
-                            <a href="#" class="dropdown-item">Trámites gubernamentales</a>
-                            <a href="#" class="dropdown-item">Servicios de Outsourcing</a>
-                            <a href="#" class="dropdown-item">Facturación electrónica</a>
-                            <a href="#" class="dropdown-item">Servicios de nómina</a>
-                            <a href="#" class="dropdown-item">Facturación electronica</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-bank"></i>Trámites gubernamentales</a>
+                                <a href="#" class="dropdown-item"><i class="fa fa-handshake-o"></i>Servicios de Outsourcing</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-laptop"></i>Facturación electrónica</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-book"></i>Servicios de nómina</a>
+                                <a href="#" class="dropdown-item"><i class="fa fa-black-tie"></i>Facturación electronica</a>
                             </div>
                           </section>
                         </div>
@@ -144,9 +141,9 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
                     role="button" aria-expanded="false" aria-haspopup="true" id="item-menu-nosotros"><i class="fa fa-users mr-1"></i>Nosotros</a>
                     <div class="dropdown-menu" aria-labelledby="item-menu-nosotros">
-                        <a href="#" class="dropdown-item">Ley antilavado de dinero</a>
-                        <a href="#" class="dropdown-item">ISR e IVA</a>
-                        <a href="#" class="dropdown-item">Resoluciones Miscelaneas Fiscales</a>
+                        <a href="nosotros.html" class="dropdown-item"><i class="fa fa-lightbulb-o pl-1"></i>Misión</a>
+                        <a href="nosotros.html" class="dropdown-item"><i class="fa fa-binoculars"></i>Visión</a>
+                        <a href="nosotros.html" class="dropdown-item"><i class="fa fa-map-o"></i>Historia</a>
                     </div>
                     
                     </li>
@@ -477,124 +474,5 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/typed.min.js"></script>
     
-    <script>
-        $(document).ready(function(){
-            
-            /*Función:Mostrar y ocultar ventana modal*/
-            
-            $('.btn-buscar').click(function(n){
-                $('#buscador-modal').fadeIn();
-            });
-            
-            $('.btn-cerrar').click(function(n){
-                $('#buscador-modal').fadeOut();
-            });
-            
-            /*Función:Megamenú*/
-            
-            $('.mega-menu .dropdown-menu').click(function(n){
-                n.stopPropagation();
-            })
-            
-            /*Funcion 3: INICIAMOS EL SCRIPT TYPED.JS*/
-            // Can also be included with a regular script tag
-            
-            var options = {
-            strings: [, "Contabilidad para Personas Morales^450","Contabilidad para Personas Físicas^450","Contabilidad para Empresas^450"],
-                
-            typeSpeed: 48,
-            smartBackspace:false,
-            loop:true,
-            backSpeed: 33,
-            startDelay:700
-            }
-            
-            var typed = new Typed(".typed", options);
-            
-            });
-    </script>
-    <script>
-            //Funciones JQuery
-        
-            $(document).ready(function(){
-            
-            $('.dropdown-menu').click(function(n){
-                n.stopPropagation();
-            })
-            
-                          });
-        
-        
-        //owl carousel
-        
-        $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:0,
-        autoWidht:false,
-    
-        responsive:{
-            0:{
-                items:1,
-            },
-            500:{
-                items:2,
-                margin:20,
-            },
-            768:{
-                items:3,
-                margin:20,
-            
-            },
-            992:{
-                items:4,
-                margin:20,
-            }
-            }
-        })
-        
-        
-            //Funciones JS//
-            
-            //sticky function;
-            window.onscroll = function(){
-                myFunction();
-            }
-            
-            function myFunction(){
-            var ayuwoki = document.getElementById('encabezado');
-            var padding = document.getElementById('mover')
-            var sticky = ayuwoki.offsetTop;
-        
-             if( window.pageYOffset > sticky ){
-                ayuwoki.classList.add("sticky");
-                padding.classList.add("padding")
-                }else{
-                    
-                ayuwoki.classList.remove("sticky");
-                }
-            }
-        
-        //Spy scroll
-function functionScroll() {
-    var section = document.querySelectorAll(".section"),
-        sections = {}, i = 0;
-
-  Array.prototype.forEach.call(section, function(e) {
-    sections[e.id] = e.offsetTop;
-  });
-
-    for (i in sections) {
-      if (sections[i] <= window.pageYOffset +100) {
-        document.querySelector('.activo').classList.remove('activo');
-        document.querySelector('a[href*=' + i + ']').classList.add('activo');
-      }
-    }
-  }
-
-  window.addEventListener('scroll', functionScroll);
-  window.addEventListener('resize', functionScroll);
-
-            
-            
-    </script>
+    <script src="js/main.js"></script>
 </html>

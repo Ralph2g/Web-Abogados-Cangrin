@@ -82,6 +82,13 @@ body {
   font-size: 1rem;
   text-decoration: underline; }
 
+.activo:hover {
+  font-weight: bold;
+  color: #F8F9FA;
+  opacity: 1;
+  font-size: 1rem;
+  text-decoration: underline; }
+
 /*--------------------------------------
  ESTILOS GENERALES DE LOS BOTONES
 -----------------------------------------*/
@@ -214,6 +221,17 @@ body {
   font-size: 1rem;
   padding-left: auto;
   color: rgba(0, 0, 0, 0.5); }
+
+.dropdown-item {
+  border-radius: .5rem;
+  padding-left: .5rem;
+  padding-right: 2.4rem; }
+
+.dropdown-item i {
+  color: #004967; }
+
+.dropdown-item:active {
+  background-color: #004967; }
 
 /*--------------------------------------
 +++++++++SECCION BIENVENIDOS++++++++++++
