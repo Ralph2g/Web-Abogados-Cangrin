@@ -240,7 +240,7 @@ body {
 +++++++++SECCION BIENVENIDOS++++++++++++
 -----------------------------------------*/
 .bienvenidos {
-  background: url("../img/1x/fondo-inicio-md-100.jpg") no-repeat center top;
+  background: url("../img/fondos/fondo-inicio-md.jpg") no-repeat center top;
   color: #F8F9FA;
   background-attachment: fixed !important;
   background-size: cover;
@@ -519,7 +519,7 @@ body {
     font-size: 16px; }
 
   .bienvenidos {
-    background: url("../img/1x/inicio-fondo2-100.jpg") no-repeat center top;
+    background: url("../img/fondos/inicio-fondo.jpg") no-repeat center top;
     background-attachment: fixed !important;
     background-size: cover; }
 
