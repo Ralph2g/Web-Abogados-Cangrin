@@ -23,20 +23,10 @@
                 margin:20,
             }
             }
-        })
+        });
 
 
 $(document).ready(function(){
-            
-            /*Función:Mostrar y ocultar ventana modal*/
-            
-            $('.btn-buscar').click(function(n){
-                $('#buscador-modal').fadeIn();
-            });
-            
-            $('.btn-cerrar').click(function(n){
-                $('#buscador-modal').fadeOut();
-            });
             
             /*Función:Megamenú*/
             
@@ -48,7 +38,8 @@ $(document).ready(function(){
             // Can also be included with a regular script tag
             
             var options = {
-            strings: [, "Contabilidad para Personas Morales^450","Contabilidad para Personas Físicas^450","Contabilidad para Empresas^450"],
+            strings: [,"Contabilidad para Personas Morales^450","Contabilidad para Personas Físicas^450","Contabilidad para Empresas^450","Declaraciones Mensuales/Anuales^450", "Devoluciones de Impuestos^450",
+                     "Auditorías Fiscales y Laborales^450", "Patentación de Marcas^450", "Trámites Gubernamentales", "Servicios de Outsourcing^450","Facturación Electrónica","Servicios de Nómina^450","Apertura de Sociedades^450"],
                 
             typeSpeed: 48,
             smartBackspace:false,
@@ -71,7 +62,7 @@ $(document).ready(function(){
             
                           });
                 
-            //Funciones JS//
+//Funciones JS//
             
             //sticky function;
             window.onscroll = function(){
@@ -91,8 +82,9 @@ $(document).ready(function(){
                 ayuwoki.classList.remove("sticky");
                 }
             }
-        
+
         //Spy scroll
+        
             function functionScroll() {
             var section = document.querySelectorAll(".section"),
                 sections = {}, i = 0;
@@ -104,8 +96,9 @@ $(document).ready(function(){
                 for (i in sections) {
       if (sections[i] <= window.pageYOffset +100) {
         document.querySelector('.activo').classList.remove('activo');
+        document.querySelector('.activo').classList.remove('activo');
         document.querySelector('a[href*=' + i + ']').classList.add('activo');
-        document.querySelector('a[href*=' + i + ']').classList.add('activo');
+        document.querySelector('div[href*=' + i + ']').classList.add('activo');
       }
     }
   }

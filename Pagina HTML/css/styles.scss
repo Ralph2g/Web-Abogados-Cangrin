@@ -11,6 +11,7 @@ $cuatro:#564243;
 html{
     font-size: 13px;
 }
+
 body{
     font-family: 'arial';
     color: $primario;
@@ -41,6 +42,7 @@ body{
     border-width: .05rem;
     border-right: none;
     align-items: center;
+    display: none;
 }
 
 #menu-scroll div {
@@ -81,12 +83,12 @@ body{
     cursor: pointer;
 }
 
-#menu-scroll a{
+#menu-scroll .s-m-anchor{
     color: #f8f9fa;
     opacity: .7;
 }
 
-#menu-scroll a:hover{
+#menu-scroll s-m-anchor:hover{
     opacity: 1;
     text-decoration: none;
     font-weight: bold;
@@ -95,17 +97,17 @@ body{
 .activo{
     font-weight: bold;
     color: $texto;
-    opacity: 1;
-    font-size: 1rem;
-    text-decoration: underline;
+    opacity: 1 !important;
+    font-size: 1.1rem;
+    
 }
 .activo:hover{
     font-weight: bold;
     color: $texto;
     opacity: 1;
     font-size: 1rem;
-    text-decoration: underline;
 }
+
 
 /*--------------------------------------
  ESTILOS GENERALES DE LOS BOTONES
@@ -265,8 +267,13 @@ width: 100%;
 .dropdown-item i{
     color: $primario;
 }
-.dropdown-item:active{
+
+.dropdown-item:hover i:before{
+    color: $texto;
+}
+.dropdown-item:hover{
     background-color: $primario;
+    color: $texto;
 }
 
 /*--------------------------------------
@@ -280,33 +287,34 @@ width: 100%;
     height: 100vh;
     flex-direction: column;
     display: flex;
+    flex-grow: 1;
 
 }
-
 .bienvenidos .texto{
- margin: auto 0
-    
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .bienvenidos .texto .container{
-    display: flex;
+    position: absolute;
+    top: calc(30%);
     flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex: 1 1 100%
+
 }
 
 /*   TEXTO CENTRAL */
+.bienvenidos #cont-inicio{
+}
 .bienvenidos .texto h1{
-    display:inline-block;
     font-size: 3rem;
 }
 
 .bienvenidos .texto p{
-    font-size: 2rem;
-    display: inline-block;
-    height: 120px;
+    font-size: 2.2rem;
+    margin: 0;
+        min-height: 11rem;
 }
 
 /*--------------------------------------
@@ -415,7 +423,9 @@ width: 100%;
 .nosotros .cuerpo div h4{
     text-align: center;
 }
-
+.nosotros img{
+    max-height: 9rem;
+}
 .nosotros .billete{
     max-height: 6rem;
     margin-top: 10px;
@@ -494,6 +504,20 @@ width: 100%;
 ++++++++++++++MEDIA´S QUERY++++++++++
 ------------------------------------*/
 
+@media (min-width:576px){   
+        .bienvenidos .texto .container {
+                left: calc(5%);
+    }
+            .pNosotros .bienvenidos .texto .container{
+        position: relative;
+        left: calc(10%);
+}
+    .bienvenidos .texto p{
+        min-height: 9rem;
+    }
+    
+}
+
 //TAMAÑOS MEDIANOS
 @media (min-width:768px){
     html{
@@ -518,16 +542,20 @@ width: 100%;
         min-width: 19rem;
     }
     
+    
+    .bienvenidos .texto .container{
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    
     .bienvenidos .texto h1{
        font-size: 3rem;
     }
-    .bienvenidos .texto h1,
-    .bienvenidos .texto p{
-        text-align: left;
-    }
     .bienvenidos .texto p{
     height: 50px;
-    font-size: 1.8rem
+    font-size: 1.8rem;
+    min-height: 4rem;
     }
     .bienvenidos .texto .container{
         align-items: stretch;
@@ -593,14 +621,19 @@ Seccion nuestros Experiencia:
     margin: 1rem 0 1rem 0;
     font-size: 1.3rem;
 }
+    
+    
 }
 
 //TAMAÑOS GRANDES
 @media (min-width: 992px){
     //carga de imagen de fondo de la pantalla grande
+    html{
+        font-size: 16px;
+    }
     .bienvenidos{
     background: url('../img/1x/inicio-fondo2-100.jpg') no-repeat center top;
-        background-attachment: fixed !important;
+    background-attachment: fixed !important;
     background-size: cover;
     }
     .mega-menu .dropdown-menu{
@@ -638,9 +671,147 @@ Seccion nuestros Experiencia:
 
 
 @media (min-width: 1500px){
-
+    
+    #menu-scroll{
+        display: flex;
+    }
     
 }
+
+/*++++++++++++++++++++++++++++++++PAGINA NOSOTROS/SERVICIOS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+//PÁGINA INICIO
+
+.pNosotros .bienvenidos .texto .container,
+.pServicios .bienvenidos .texto .container{
+    position: absolute;
+    top: calc(23%);
+}
+
+
+
+//CONTENIDO
+.pNosotros .cabeza-contenido .titulo,
+.pServicios .cabeza-contenido .titulo{
+        border-left-width: 0px;
+        padding-left: 0;
+}
+
+.pNosotros .cabeza-contenido .separador-contenido,
+.pServicios .cabeza-contenido .separador-contenido{
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+    height: 5px;
+    width: 20%;
+    background: $primario;
+}
+
+.pNosotros .foto p{
+    background-color: $primario;
+    border-radius: 8rem;
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+}
+
+.pNosotros linea-tiempo div{
+    display: flex;
+    flex-direction: row;
+    padding-right: 0;
+    
+}
+.pNosotros .linea{
+    display: inline-block;
+    height: .8rem;
+    width: 90%;
+    border: solid;
+    border-color: gray;
+    border-radius: 2rem;
+    border-width: 1px;
+    margin: auto 0 auto 0;
+}
+.pNosotros .punto{
+    display: inline-block;
+    background-color: $primario;
+    border-radius: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: auto;
+    margin-right: -1.4rem;
+}
+
+.pServicios .perfiles{
+}
+
+.pServicios .card{
+    border: solid;
+    border-radius: 1rem;
+    min-height: 31rem;
+    min-width: 20rem;
+    max-width: 20rem;
+}
+.pServicios .card .card-header{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    color: $primario;
+    
+}
+
+
+
+.pServicios .card .card-text{
+    color: $primario;
+    font-size: 1.2rem;
+}
+.pServicios  main .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pServicios .card i{
+    color: $primario;
+    font-size: 5rem;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++MEDIAQUERY'S NOSOTROS++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media (min-width:768px){   
+    .pNosotros .trayectoria,
+    .pServicios .trayectoria{
+            display: table !important
+    }
+    .pNosotros .bienvenidos .texto .container,
+    .pServicios .bienvenidos .texto .container{
+    position: relative;
+    top: auto;
+    left: auto;
+}
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++Secciones internas++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++*/
+
+.paginas-internas .bienvenidos{
+    height: 50vh;
+}
+
+.paginas-internas .ruta{
+    background: $primario;
+    color: $texto;
+
+}
+
+.paginas-internas .ruta a{
+    color: $texto;
+    text-decoration: underline;
+}
+
+
 
 
 
