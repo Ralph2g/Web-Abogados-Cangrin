@@ -48,6 +48,7 @@ $(document).ready(function(){
             startDelay:700
             }
             
+            if( document.querySelector('.typed') != null )
             var typed = new Typed(".typed", options);
             
 });
@@ -60,7 +61,7 @@ $(document).ready(function(){
                 n.stopPropagation();
             })
             
-                          });
+        });
                 
 //Funciones JS//
             
@@ -95,10 +96,13 @@ $(document).ready(function(){
 
                 for (i in sections) {
       if (sections[i] <= window.pageYOffset +100) {
+          if( document.querySelector('.activo') != null ){
+             
         document.querySelector('.activo').classList.remove('activo');
         document.querySelector('.activo').classList.remove('activo');
         document.querySelector('a[href*=' + i + ']').classList.add('activo');
         document.querySelector('div[href*=' + i + ']').classList.add('activo');
+             }
       }
     }
   }

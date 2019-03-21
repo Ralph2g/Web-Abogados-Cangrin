@@ -282,7 +282,6 @@ width: 100%;
 .bienvenidos{
     background: url('../img/fondos/fondo-inicio-md.jpg') no-repeat center top;
     color: $texto;
-    background-attachment: fixed !important;
     background-size: cover;
     height: 100vh;
     flex-direction: column;
@@ -312,7 +311,7 @@ width: 100%;
 }
 
 .bienvenidos .texto p{
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin: 0;
         min-height: 11rem;
 }
@@ -505,17 +504,12 @@ width: 100%;
 ------------------------------------*/
 
 @media (min-width:576px){   
-        .bienvenidos .texto .container {
-                left: calc(5%);
-    }
-            .pNosotros .bienvenidos .texto .container{
-        position: relative;
+    .bienvenidos .texto .container {
         left: calc(10%);
-}
+    }
     .bienvenidos .texto p{
         min-height: 9rem;
-    }
-    
+    }    
 }
 
 //TAMAÑOS MEDIANOS
@@ -523,8 +517,12 @@ width: 100%;
     html{
     font-size: 15px;
     }
+    .bienvenidos{
+    background: url('../img/fondos/fondo-inicio-md.jpg') no-repeat center top;
+    background-attachment: fixed !important;
+    background-size: cover;
+    }
     
-    //carga de imagen de fondo de la pantalla mediana
     .navbar .container{
         position: relative;
     }
@@ -564,14 +562,14 @@ width: 100%;
 /*--------------------------------
 ++++++++++++++NOSOTROS++++++++++
 ------------------------------------*/
-.nosotros .cuerpo div h4{
+    .nosotros .cuerpo div h4{
     font-weight: bold;
 }
     .nosotros .billete{
     max-height: 8rem;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    
 }
     
     //Seccion nuestros Experiencia:
@@ -631,11 +629,6 @@ Seccion nuestros Experiencia:
     html{
         font-size: 16px;
     }
-    .bienvenidos{
-    background: url('../img/fondos/inicio-fondo.jpg') no-repeat center top;
-    background-attachment: fixed !important;
-    background-size: cover;
-    }
     .mega-menu .dropdown-menu{
         
         left: auto;
@@ -682,12 +675,15 @@ Seccion nuestros Experiencia:
 
 //PÁGINA INICIO
 
-.pNosotros .bienvenidos .texto .container,
 .pServicios .bienvenidos .texto .container{
     position: absolute;
-    top: calc(23%);
+    top: calc(25%);
 }
 
+.pNosotros .bienvenidos .texto .container{
+    position: absolute;
+    top: calc(25%); 
+}
 
 
 //CONTENIDO
@@ -778,6 +774,14 @@ Seccion nuestros Experiencia:
 /*++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++MEDIAQUERY'S NOSOTROS++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media (min-width:572px){
+
+    .pNosotros .bienvenidos .texto .container{
+        position: relative;
+        left: calc(5%);
+        top: calc(15%); 
+    }
+}
 
 @media (min-width:768px){   
     .pNosotros .trayectoria,
