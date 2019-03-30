@@ -62,9 +62,26 @@ $(document).ready(function(){
             })
             
         });
+
+
+//Whatsapp
+
+$(function(){
+    $(window).scroll(function () {
+        var scrolltop = $(this).scrollTop();
+        if (scrolltop >= 500) {
+            $(".whatsapp").fadeIn();
+        } else {
+            $(".whatsapp").fadeOut();
+        }
+    });
+});
                 
 //Funciones JS//
             
+
+
+
             //sticky function;
             window.onscroll = function(){
                 myFunction();
@@ -95,7 +112,7 @@ $(document).ready(function(){
             });
 
                 for (i in sections) {
-      if (sections[i] <= window.pageYOffset +100) {
+      if (sections[i] <= window.pageYOffset +300) {
           if( document.querySelector('.activo') != null ){
              
         document.querySelector('.activo').classList.remove('activo');
@@ -109,5 +126,7 @@ $(document).ready(function(){
 
   window.addEventListener('scroll', functionScroll);
   window.addEventListener('resize', functionScroll);
+
+
 
             

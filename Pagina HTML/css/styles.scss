@@ -185,7 +185,7 @@ box-shadow: 0 0 0 .2rem rgba($primario, .5)!important; // arriba, laterales difu
     margin-bottom: 1.4rem;
     height: 7px;
     width: 100%;
-    background: $primario
+    background: $primario;
 }
 .cabeza-contenido .titulo{
     border-left: solid;
@@ -231,6 +231,7 @@ width: 100%;
 .encabezado .logo img{
     width: 230px;
     padding-right: .5rem;
+    height: 100%;
 }
 .encabezado .btn-nav{
     padding: .6rem 0 .6rem 0;
@@ -316,6 +317,22 @@ width: 100%;
         min-height: 11rem;
 }
 
+/*ESTILOS PARA INTERNET EXPLORER 11+ */
+@media all and (-ms-high-contrast:none), (-ms-high-contrast:active){
+    body{
+       display: flex;
+        flex-direction: column;
+    }
+    .navbar{
+        min-height: 1px;
+    }
+    
+    
+    
+}
+
+
+
 /*--------------------------------------
 +++++++++SECCION SERVICIOS++++++++++++
 -----------------------------------------*/
@@ -363,7 +380,26 @@ width: 100%;
     font-weight: bold;
     text-align: center;
     padding: 1rem;
-    flex: 1 1 100%
+    flex: 1 1 100%;
+}
+
+@media all and (-ms-high-contrast:none), (-ms-high-contrast:active){
+
+    
+    .servicios h3{
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+
+
+.servicios h3 a{
+    color: $primario;
+    text-decoration: none;
+    
 }
 
 .servicios article:after{
@@ -373,6 +409,8 @@ width: 100%;
     transition: all 2s ease;
     font-size: 2rem
 }
+
+
 .servicios article:hover::after{
     left: -.5rem;
     opacity: 1;
@@ -424,12 +462,19 @@ width: 100%;
 }
 .nosotros img{
     max-height: 9rem;
+    height: 100%;
 }
 .nosotros .billete{
     max-height: 6rem;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    height: 100%;
+}
+.nosotros a{
+    color: $primario;
+}
+.nosotros a:hover{
+    text-decoration: none;
 }
 
 /*--------------------------------
@@ -437,7 +482,9 @@ width: 100%;
 ------------------------------------*/
 
 .owl-carousel .item{
-    
+    display: block;
+    position: relative;
+    overflow: hidden;
     text-decoration: none;
     }
 
@@ -446,23 +493,60 @@ width: 100%;
     margin: 1rem 0 1rem 0;
     font-size: 1.5rem;
 }
-.item img{
-      display: block;
+.owl-carousel .item img{
       width: 100%;
       height: auto;
+      transition: all .3s ease;
 }
 .owl-carousel i{
-
     color: $primario;
     display:inline-block; 
-    
 }
 
-.owl-nav div{
-    display: inline-block;
-    margin: 0 .5rem;
-    font-size: 4rem
+//mascara--------------------
+.owl-carousel .item .mascara{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: rgba(31,29,86,0.73);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFF;
+    opacity: 0;
+    transition: all .4s ease;
+    z-index: 10;
 }
+.owl-carousel .item .mascara h3,
+.owl-carousel .item .mascara p{
+    position: relative;
+    top: -2rem;
+    transition: all .3s ease;
+    //correcion para IE11´+
+    width: 100%;
+    font-weight: bold;
+}
+
+/*Estado hover*/
+
+.owl-carousel .item:hover .mascara{
+    opacity: 1;
+}
+
+.owl-carousel .item:hover .mascara h3,
+.owl-carousel .item:hover .mascara p,
+{
+    top: 0;
+}
+.owl-carousel .item:hover img{
+    transform: scale(1.3)
+}
+
+
 /*--------------------------------
 ++++++++++++++CONTACTO++++++++++
 ------------------------------------*/
@@ -497,6 +581,21 @@ width: 100%;
 .redes a:hover{
     opacity: 1;
 }
+//*********************FOOTER*****************+
+
+.whatsapp {
+    position: fixed;
+    text-decoration: none;
+    outline: 0;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99999;
+    cursor: pointer;
+}
+.whatsapp img {
+    height: 5rem;
+}
+
 
 
 /*--------------------------------
@@ -527,6 +626,10 @@ width: 100%;
         position: relative;
     }
     
+ 
+    
+    
+    
     .mega-menu{
         position: static;
     }
@@ -546,7 +649,16 @@ width: 100%;
         top: auto;
         left: auto;
     }
+
+   /*ESTILOS PARA INTERNET EXPLORER 11+ */
+    @media all and (-ms-high-contrast:none), (-ms-high-contrast:active){
+
+     .bienvenidos .texto .container{
+        position: absolute;
+        left:calc(16%);
+    }
     
+    }
     .bienvenidos .texto h1{
        font-size: 3rem;
     }
@@ -634,6 +746,22 @@ Seccion nuestros Experiencia:
         left: auto;
     }
     
+    @media all and (-ms-high-contrast:none), (-ms-high-contrast:active){
+    
+    .mega-menu{
+        position: static;
+    }
+    
+   .mega-menu .dropdown-menu{
+       position: absolute;
+       width: 100%;
+       left: 0;
+       top: auto;
+        
+    }
+        
+    }
+    
     #titulo-principal{
         font-size:3.5rem;
     }
@@ -646,6 +774,10 @@ Seccion nuestros Experiencia:
         right: 1rem;
         top: 28rem;
         height: 20rem;
+    }
+    
+    .owl-carousel h4{
+    font-size: 1.2rem;
     }
 
 }
@@ -705,10 +837,15 @@ Seccion nuestros Experiencia:
 
 .pNosotros .foto p{
     background-color: $primario;
+    background: url(../img/foto.jpeg);
     border-radius: 8rem;
-    height: 10rem;
-    width: 10rem;
+    height: 11.5rem;
+    width: 11.5rem;
     margin: auto;
+    filter: grayscale(100%);
+}
+.pNosotros .foto p:hover{
+    filter: grayscale(0%);
 }
 
 .pNosotros linea-tiempo div{
@@ -744,8 +881,8 @@ Seccion nuestros Experiencia:
     border: solid;
     border-radius: 1rem;
     min-height: 31rem;
-    min-width: 20rem;
-    max-width: 20rem;
+    min-width: 19.5rem;
+    max-width: 19.5rem;
 }
 .pServicios .card .card-header{
     padding-bottom: 2rem;
@@ -794,6 +931,17 @@ Seccion nuestros Experiencia:
     top: auto;
     left: auto;
 }
+    
+       /*ESTILOS PARA INTERNET EXPLORER 11+ */
+    @media all and (-ms-high-contrast:none), (-ms-high-contrast:active){
+
+    .pNosotros .bienvenidos .texto .container,
+    .pServicios .bienvenidos .texto .container{
+        position: absolute;
+        top: auto;
+        left:calc(16%);
+    }
+    }
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++
